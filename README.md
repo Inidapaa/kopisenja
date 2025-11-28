@@ -10,9 +10,11 @@ Setelah deploy backend ke Railway, tambahkan environment variable di Vercel:
 2. Pergi ke **Settings** → **Environment Variables**
 3. Tambahkan:
    - **Name**: `VITE_API_BASE_URL`
-   - **Value**: `https://your-railway-backend-url.railway.app/api` (ganti dengan URL backend Railway kamu)
+   - **Value**: URL backend Railway kamu (contoh: `backend-kopisenja-production.up.railway.app` atau `https://backend-kopisenja-production.up.railway.app/api`)
+     - **Catatan**: Bisa pakai dengan atau tanpa `https://` dan `/api` - sistem akan otomatis normalize
 4. Klik **Save**
-5. **Redeploy** project (penting! karena Vite env variables dibaca saat build time)
+5. **PENTING**: Setelah save, klik **Deployments** → pilih deployment terbaru → klik **Redeploy** (atau buat deployment baru)
+   - Ini wajib karena Vite env variables dibaca saat build time, bukan runtime!
 
 ### Railway (Backend)
 
